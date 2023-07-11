@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.26.4)
 
-project(sfml-snake)
+project(sfml-snake VERSION 1.0.1)
 
 # clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
