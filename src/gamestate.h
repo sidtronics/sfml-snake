@@ -14,9 +14,10 @@ class GameState : public States {
 
         void updateState() override;
         void drawState() override;
+        void pauseState() override;
         
         struct Controls {
-            sf::Keyboard::Key up, down, left, right;
+            sf::Keyboard::Key up, down, left, right, pause;
         };
 
     private:
@@ -32,8 +33,9 @@ class GameState : public States {
         Button m_retryButton;
         sf::Text m_score, 
             m_gameOver,
-            m_instructions;
+            m_instructions,
+            m_paused;
 
         std::chrono::steady_clock::time_point m_currentTime, m_lastTime;
-        std::chrono::duration<double,std::ratio<1,1000>> m_gameSpeed;
+        std::chrono::milliseconds m_gameSpeed;
 };
