@@ -2,6 +2,8 @@
 #include "gamestate.h"
 #include <SFML/Audio.hpp>
 
+extern const char* VERSION;
+
 MenuState::MenuState(sf::RenderWindow& window, Game& game) :
     States(window), 
     m_game(game),
@@ -9,7 +11,7 @@ MenuState::MenuState(sf::RenderWindow& window, Game& game) :
     m_quitButton("Quit" , m_game.getFont(), sf::Vector2f(100,30), sf::Vector2f(400,450.f*3/4), window),
     m_logo("Snake", m_game.getFont(), 75),
     m_credit("Made by Siddhesh Dharme", m_game.getFont(), 12),
-    m_version("v1.0.0", m_game.getFont(), 12) {
+    m_version(VERSION, m_game.getFont(), 12) {
 
 
     m_logo.setOrigin(m_logo.getLocalBounds().getSize()/2.f + m_logo.getLocalBounds().getPosition() - sf::Vector2f(1,1));
