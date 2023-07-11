@@ -48,3 +48,7 @@ void MenuState::drawState() {
     m_window.draw(m_credit);
     m_window.draw(m_version);
 }
+
+void MenuState::pauseState() {
+
+}

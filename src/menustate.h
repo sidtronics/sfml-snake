@@ -11,6 +11,7 @@ class MenuState : public States {
 
         void updateState() override;
         void drawState() override;
+        void pauseState() override;
 
     private:
         Game& m_game;

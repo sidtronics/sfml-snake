@@ -23,6 +23,9 @@ void Game::updateEvents() {
 
         if(event.type == sf::Event::Closed)
             m_window.close();
+
+        if(event.type == sf::Event::LostFocus)
+            m_states.top()->pauseState();
     }
 }
 

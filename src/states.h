@@ -11,6 +11,7 @@ class States {
 
         virtual void updateState() = 0;
         virtual void drawState() = 0;
+        virtual void pauseState() = 0;
 
     protected:
         sf::RenderWindow& m_window;
