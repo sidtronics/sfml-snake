@@ -56,9 +56,12 @@ void GameState::updateState() {
     }
 
     if(!m_isPaused) {
+        
+        bool isUpdated = true; 
 
-        if(newDirection != -m_snake.getDirection() && (newDirection != sf::Vector2i(0,0))) {
+        if(isUpdated && newDirection != -m_snake.getDirection() && (newDirection != sf::Vector2i(0,0))) {
             m_snake.setDirection(newDirection);
+            isUpdated = false;
         }
         
         if(m_gameSpeed <= m_currentTime - m_lastTime) {
@@ -70,6 +73,7 @@ void GameState::updateState() {
             }
 
             m_lastTime = m_currentTime;
+            isUpdated = true;
         }
 
     } 
