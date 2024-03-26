@@ -7,7 +7,7 @@
 #include "menustate.h"
 #include "snake.h"
 
-extern const char* VERSION = "v1.0.1";
+extern const char* VERSION = "v1.0.2";
 
 const sf::Color Snake::m_emptyColor(0,0,0);
 const sf::Color Snake::m_foodColor(255,0,0);
